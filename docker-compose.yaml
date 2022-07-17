@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    container_name: docker-fastapi
+    restart: always
+    build: .
+    ports:
+      - '8000:8000'
+    links:
+      - database
+  database:
+    image: 'postgres:alpine'
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=yz9oTn1AvH0vGer#pJip&vF
+      - POSTGRES_DB=api_keys
