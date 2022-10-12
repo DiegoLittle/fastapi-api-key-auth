@@ -7,14 +7,14 @@ import models
 from database import SessionLocal, engine
 from fastapi.security import OAuth2PasswordBearer
 from fastapi.middleware.cors import CORSMiddleware
-from routers import files
+from routers import example
 import secrets
 
 models.Base.metadata.create_all(bind=engine)
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 app = FastAPI()
 
-app.include_router(files.router)
+app.include_router(example.router)
 
 origins = "*"
 
