@@ -7,3 +7,7 @@
 - SQLAlchemy
 - API Key Authentication
 
+
+### Setup
+- Set environment variables in .env_example file to DB USER PASS and change the name to .env
+- Edit the docker-compose.yml file to set the database name and user

@@ -27,7 +27,7 @@ app.add_middleware(
 )
 
 api_keys = [
-    "akljnv13bvi2vfo0b0bw"
+    
 ]  # This is encrypted in the database
 
 
